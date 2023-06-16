@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  web:
+    image: test_jenkins_nginx:1.0
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: web
+    ports:
+      - 8083:80
